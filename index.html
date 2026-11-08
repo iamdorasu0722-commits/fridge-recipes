@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>冰箱食譜｜用現有食材找晚餐</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<div class="w">
+<h1>冰箱裡有什麼？<br><span>今晚就煮這道</span></h1>
+<p class="sub">輸入手邊的食材，馬上找到能做的料理。鹽、油、醬油、糖、胡椒預設家裡都有。</p>
+
+<div class="box">
+  <div class="row">
+    <input type="text" id="in" placeholder="輸入食材，例如：雞蛋" list="dl" autocomplete="off" aria-label="輸入食材">
+    <datalist id="dl"></datalist>
+    <button class="add" id="addBtn">加入</button>
+  </div>
+  <div class="chips" id="sel" aria-live="polite"></div>
+  <p class="lab">常見食材，點一下就加入</p>
+  <div class="chips" id="quick"></div>
+</div>
+
+<div class="bar">
+  <h2 id="rt">推薦食譜</h2>
+  <label class="tg"><input type="checkbox" id="onlyOk"> 只看現在就能做的</label>
+</div>
+<div class="grid" id="res"></div>
+<p class="foot">小提醒：份量為 2 人份的家常做法，可依口味調整。</p>
+</div>
+
+<div class="ov" id="ov" role="dialog" aria-modal="true"><div class="sh" id="sh"></div></div>
+
+<script src="assets/app.js"></script>
+</body>
+</html>
